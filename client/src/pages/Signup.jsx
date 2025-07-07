@@ -52,17 +52,21 @@ const Signup = ({ mode }) => {
         mode={mode}
       />
       <div className={`container-flex d-flex justify-content-center align-items-center login-container bg-${mode}`}>
-        <div className="row">
+        <div
+          className="row w-100"
+          style={{ maxWidth: "1200px" }}
+        >
           <div className="col-md-12">
             <h2 className={`fs-2 fw-bold text-center pb-4 ${mode === "dark" ? "text-light" : "text-dark"}`}>Create an Account</h2>
           </div>
-          <div className="col-md-6">
-            <div className="card border-0">
+          <div className="col-md-6 d-flex align-items-stretch">
+            <div className="card border-0 w-100">
               <img
-                className="card-img"
+                className="card-img h-100"
                 loading="lazy"
                 src={b1}
                 alt="Signup Image"
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>
@@ -70,6 +74,7 @@ const Signup = ({ mode }) => {
             <form
               className={`w-100 ${mode === "dark" ? "text-light" : "text-dark"} `}
               onSubmit={handleSubmit}
+              style={{ minHeight: "500px", display: "flex", flexDirection: "column", justifyContent: "center" }}
             >
               <div className="form-outline mb-4">
                 <label className={`${mode === "dark" ? "text-light" : ""}`}>Name</label>
