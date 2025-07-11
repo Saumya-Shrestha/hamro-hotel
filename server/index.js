@@ -11,13 +11,19 @@ const authRoutes = require("./routes/Auth");
 const productRoutes = require("./routes/Products");
 const cartRoutes = require("./routes/Cart");
 
+dotenv.config();
+
 const app = express();
 dbConnect();
 
-dotenv.config();
 app.use(express.json());
-app.use(cors());
-const port = process.env.PORT;
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
+const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => {
   res.send("Hello World!");

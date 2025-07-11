@@ -13,6 +13,8 @@ import ProductList from "../pages/ProductList";
 import SearchResult from "../components/common/SearchResult";
 import Profile from "../pages/Profile";
 import ProtectedRoute from "./ProtectedRoute";
+import ForgetPassword from "../components/auth/ForgetPassword";
+import ResetPassword from "../components/auth/ResetPassword";
 
 const AppRoutes = ({ mode }) => {
   return (
@@ -69,6 +71,14 @@ const AppRoutes = ({ mode }) => {
           </ProtectedRoute>
         }
       />
+      <Route
+        path="/forgot-password"
+        element={<ForgetPassword />}
+      />
+      <Route
+        path="/reset-password/:id/:token"
+        element={<ResetPassword />}
+      ></Route>
     </Routes>
   );
 };

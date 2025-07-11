@@ -34,7 +34,7 @@ const Signup = ({ mode }) => {
     console.log("Backend response: ", data);
     if (data.authToken) {
       login(data.authToken);
-      navigate("/");
+      navigate("/login");
     } else {
       console.log("Invalid Credentials");
     }

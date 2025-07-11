@@ -117,12 +117,12 @@ const Login = ({ mode }) => {
                 </div>
 
                 <div className="col-md-6 d-flex justify-content-center small">
-                  <a
-                    href="#!"
+                  <Link
+                    to="/forgot-password"
                     className={mode === "light" ? "light-accent-text" : "dark-accent-text"}
                   >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
 
