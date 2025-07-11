@@ -110,7 +110,7 @@ const forgotPassword = async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "hamrohotel.resetpassword@gmail.com", // Your Gmail
+        user: "saumyamanshrestha@gmail.com", // Your Gmail
         pass: gpass, // Your Gmail App Password
       },
       secure: true, // Use TLS
@@ -120,7 +120,7 @@ const forgotPassword = async (req, res) => {
     const resetLink = `http://localhost:5173/reset-password/${user._id}/${token}`;
 
     const mailOptions = {
-      from: "hamrohotel.resetpassword@gmail.com",
+      from: "saumyamanshrestha@gmail.com",
       to: email,
       subject: "Reset Password Link",
       text: `Click the link to reset your password: ${resetLink}`,
